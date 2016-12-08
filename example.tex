@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% REPORT EXAMPLE
+%% --------------
+\documentclass[10pt,a4paper]{article}
+
+%% report parameters
+\newcommand{\reportDate}{05 $|$ December $|$ 2016}
+\newcommand{\reportType}{Hokokukai}
+\usepackage{labreport}
+
+%% report data folders
+\graphicspath{{C:/Users/Thomas/Github/ReportTex/figs/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\noindent {\huge Report Title} \\
+%\begin{multicols}{2}
+
+\section{Introduction}
+Generalized Maxwell Slip (GMS) model \cite{Al-Bender2005-sh} with
+Friction force $F_f$ equation:
+\begin{equation}
+F_f(t) = \sum_{i=1}^N F_i(t) + \sigma_2v(t)
+\end{equation}
+State equations:
+\begin{equation}
+\frac{dF_i}{dt} = \text{sgn}(v)C \left( \alpha_i - \frac{F_i}{s(v)} \right)
+\end{equation}
+
+
+\bibliographystyle{ieeetr}
+%\bibliography{../../2_references/citations.bib}
+\bibliography{citations.bib}
+%\end{multicols}
+\end{document}
+
+
+%\begin{easylist}[itemize]
+%& Static
+%&& Coulomb
+%&& Stribeck
+%\end{easylist}
