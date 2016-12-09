@@ -1,0 +1,63 @@
+\ProvidesPackage{labreport}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LAB REPORT
+%% ----------
+%% @descr.:  versatile and elegant report style file
+%% @author:  Thomas Beauduin, University of Tokyo
+%% @input:   \reportDate, \reportType
+%%			 \reportInst, \reportDept
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Encoding Settings
+\usepackage[T1]{fontenc}						% Multi-Language Encoding
+\usepackage[utf8]{inputenc}						% unicode encoding (Mac&Win)
+\usepackage{lmodern}							% Multilanguage General Font
+\usepackage{textcomp}							% Text Symbols
+\usepackage{amssymb,amsmath}					% Math Notation
+\usepackage{framed}								% Box text
+\usepackage[scientific-notation=true]{siunitx}	% SIunits
+
+%%%%% Font Settings (IEEEtrans)
+\renewcommand*\rmdefault{ptm}					% roman default font
+\renewcommand*\sfdefault{phv}					% sans serif default
+\renewcommand*\ttdefault{pcr}					% monspace default
+
+%%%%% Tabel Settings
+\usepackage{tabularx}							% Parametrised tabels
+\usepackage{booktabs}   						% Professional tabels
+\usepackage{multirow}							% Multirows in tabels
+\usepackage[ampersand]{easylist}				% Customisable lists
+
+%%%%% Figure Settings
+\usepackage{wrapfig}							% Wrapping figures
+\usepackage{calc}      	 						% Scalling figures
+\usepackage{subcaption} 						% Captions for subfigures
+\usepackage{float} 								% Figures in multicolumn
+\usepackage{graphicx}							% Including figures
+\usepackage{grffile}							% full path to figure
+
+%%%%% PDF Setup
+\usepackage{hyperref}							% PDF links
+\hypersetup{									% settings
+hidelinks=false,								% hide colorbox
+pdftitle={\reportType},            				% Macros title
+pdfauthor={\reportAuth}}    					% Macros author
+
+%%%%% Layout Setup
+\usepackage[hmargin=1cm,vmargin=2.5cm]{geometry}
+\setlength{\parindent}{0pt}						% remove indentation
+\setlength{\columnsep}{0.8cm}					% colum seperation (10pt text)
+\usepackage{fancyhdr}							% Layout style			
+\usepackage{lastpage}							% Page numbering
+\usepackage{multicol}							% Double column structure
+\pagestyle{fancy}								% Define style
+\setlength\headheight{15pt}						% Header higth (>13pt)
+\renewcommand{\headrulewidth}{0.4pt}			% Header
+\renewcommand{\footrulewidth}{0.4pt}			% Footer
+\lhead{\textsc{\reportAuth}}					% Author
+\chead{\textsc{\reportType}}					% Header title
+\rhead{\textsc{\reportDate}}					% Header date
+\lfoot{\textsc{\reportInst}}					% University/company
+\cfoot{\textsc{\reportDept}}					% Laboratory/department
+\rfoot{\thepage\ / \pageref{LastPage} }			% Page indicator
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
