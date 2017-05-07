@@ -1,0 +1,100 @@
+\ProvidesPackage{cveng}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Engineer Curriculum Vitae:	
+%% ---------------------
+%% @Descr.:  Latex layout package for engineering CV   
+%% @Author: Thomas Beauduin, University of Tokyo, 2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Encoding Settings
+\usepackage{unicode}							% Universal Encoding
+\usepackage{marvosym}							% Display Symbols
+\usepackage{textcomp}							% Text Symbols
+
+%%%%% Tabel Settings
+\usepackage{tabularx}							% Parametrised tables
+
+%%%%% Figure Settings
+\usepackage{graphicx}							% Including figures
+\usepackage{wrapfig}							% Textwrap figures
+\usepackage{calc}      	 						% Scalecalc figures	
+\usepackage{subcaption} 						% Subcap figures
+
+%%%%% Layout Settings
+\usepackage{parskip}							% proper indenting
+\usepackage{titlesec}							% title design
+\titleformat{\section}{\large \scshape 			% title change
+			 \raggedright}{}{0em}{}[\titlerule] % Section settings
+\titlespacing{\section}{0pt}{3pt}{0pt} 			% Spacing around sections
+\usepackage[top=1.5cm, bottom=1.8cm, 			% page margin settings
+			left=1.3cm, right=1.3cm]{geometry}	% min. 1.2
+\usepackage{fancyhdr}							% Layout style	
+\usepackage{lastpage}							% Page numbering
+\fancypagestyle{plain}{							% redefine plain
+\fancyhf{} 										% clear header/footer
+\fancyfoot[C]{\thepage / \pageref{LastPage}} 	% center footnote
+%\fancyfoot[L]{Curriculum Vitae}				% left footnote
+\fancyfoot[R]{\AppDate}							% right footnote
+\renewcommand{\headrulewidth}{0pt}				% header sep line
+\renewcommand{\footrulewidth}{0pt}}				% footer sep line
+
+%%%%% PDF Settings
+\usepackage{color}								% Colors in text
+\definecolor{dblue}{RGB}{47,68,117}				% Darkblue color
+\usepackage{hyperref}							% PDF links
+\hypersetup{
+pdftitle={CV},             						% Macros title
+pdfauthor={Thomas Beauduin},    				% Macros author
+pdfsubject={CVapplication},            			% Macros subject
+colorlinks=true,        						% Colored links
+linkcolor=dblue,    							% Internal links color
+citecolor=green,        						% Bib links color
+filecolor=magenta,     							% File links color
+urlcolor=blue}           						% Ext links color
+
+%%%%% Header Settings
+\newcommand{\EUheader}{
+\begin{wrapfigure}{R}{0.25\textwidth}			% wrap cover pic
+\vspace{-30pt}
+\begin{center}
+\includegraphics[scale=0.6]{data/PP1_c.jpg}		% cover picture
+\end{center}
+\end{wrapfigure}
+\par{\Huge \textsc{Thomas Beauduin}\par}		% Applicant Name
+\par{\large \textsc{Curriculum Vitae}\par}		% Resume description
+\begin{center}
+\begin{tabularx}{100pt}{r}
+Belgian, male \\								% Applicant Contact
+3 july 1991, Leuven \\
+Driving Licence \\
+\\
+\Mobilefone \hspace{1 mm} +32476014340, +818095784579 \\
+\MVAt \hspace{1 mm} thomasbeauduin@gmail.com \\
+\Letter \hspace{1 mm} Lenniksesteenweg 444, 1500 Halle
+\end{tabularx}
+\end{center}
+\vspace{0.8cm}}
+
+\newcommand{\USheader}{
+\begin{wrapfigure}{R}{0.25\textwidth}				% wrap cover pic
+\vspace{-30pt}
+\begin{center}
+\includegraphics[scale=0.6]{data/PP1_c.jpg}			% cover picture
+\end{center}
+\end{wrapfigure}
+\par{\Huge \textsc{Thomas Beauduin}\par}			% Applicant Name
+\par{\large \textsc{Curriculum Vitae}\par}			% Resume Description
+\begin{center}
+\begin{tabularx}{100pt}{r}
+Belgian, male \\									% Applicant Info
+3 july 1991, Leuven \\
+Driving Licence \\
+\\
+\Mobilefone \hspace{1 mm} +32476014340 \\
+\MVAt \hspace{1 mm} thomasbeauduin@gmail.com \\
+\Letter \hspace{1 mm} Lenniksesteenweg 444, 1500 Halle
+\end{tabularx}
+\end{center}
+\vspace{0.8cm}}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
