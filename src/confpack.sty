@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CONFERENCE PACKAGES
+%% -------------------
+%% @descr.:  package inclusion for conference papers
+%% @author:  Thomas Beauduin, University of Tokyo
+%% @inputs:  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{confpack}
+
+%%%%% Math Packages
+\usepackage{textcomp}							% Text Symbols
+\usepackage{amssymb,amsmath}					% Math Notation
+
+%%%%% Figure Settings
+%\usepackage{wrapfig}							% Wrapping figures
+%\usepackage{calc}      	 						% Scalling figures
+%\usepackage{float} 								% Figures in multicolumn
+\usepackage{graphicx}							% Including figures
+\usepackage{grffile}							% full path to figure
+\usepackage[caption=false,font=footnotesize,farskip=0pt]{subfig}
+% subfigure depreciated; subcaption adviced, but longer code
+
+%%%%% Tabel Settings
+%\usepackage{array}								% alignment package
+\usepackage{tabularx}							% Parametrised tabels
+\usepackage{booktabs}   						% Professional tabels
+\setlength\heavyrulewidth{0.3ex}				% Table line style
+\usepackage{multirow}							% Multirows in tabels
+
+%%%%% Custom Commands
+\newcommand{\bm}[1]{\mbox{\boldmath $#1$}} 		% bold math
+\newcommand{\eq}[1]{(\ref{eq:#1})} 				% equations reference
+\newcommand{\fig}[1]{Fig.\ \ref{fig:#1}} 		% figure referencing
+\newcommand{\tab}[1]{Table\ \ref{tab:#1}} 		% table referencing
+%\renewcommand{\figurename}{Fig.} 				% caption name
+
+\hfuzz=\maxdimen \tolerance=10000 \hbadness=10000
+% supress 'back box' warnings: typical for ieee papers 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -26,25 +26,26 @@
 \usepackage{array}								% alignment package
 \usepackage{tabularx}							% Parametrised tabels
 \usepackage{booktabs}   						% Professional tabels
-\setlength\heavyrulewidth{0.3ex}				% Table line style
+%\setlength\heavyrulewidth{0.3ex}				% Table line style
 \usepackage{multirow}							% Multirows in tabels
 \usepackage[ampersand]{easylist}				% Customisable lists
 
 %%%%% Figure Settings
 \usepackage{wrapfig}							% Wrapping figures
 \usepackage{calc}      	 						% Scalling figures
-\usepackage{subcaption} 						% Captions for subfigures
 \usepackage{float} 								% Figures in multicolumn
 \usepackage{graphicx}							% Including figures
 \usepackage{grffile}							% full path to figure
+\usepackage[caption=false,font=footnotesize,farskip=0pt]{subfig}
+% subfigure depreciated; subcaption adviced, but longer code
 
 %%%%% PDF Setup
 \usepackage{hyperref}							% PDF links
 \hypersetup{									% settings
-hidelinks=false,								% hide colorbox
+colorlinks=false,								% hide colorbox
 pdftitle={\reportType},            				% Macros title
-pdfauthor={\reportAuth}}    					% Macros author
-
+pdfauthor={\reportAuth},   						% Macros author
+}
 %%%%% Layout Setup
 \usepackage[hmargin=1cm,vmargin=2.5cm]{geometry}
 \setlength{\parindent}{0pt}						% remove indentation
@@ -62,4 +63,12 @@ pdfauthor={\reportAuth}}    					% Macros author
 \lfoot{\textsc{\reportInst}}					% University/company
 \cfoot{\textsc{\reportDept}}					% Laboratory/department
 \rfoot{\thepage\ / \pageref{LastPage} }			% Page indicator
+
+%%%%% Custom Commands
+\newcommand{\bm}[1]{\mbox{\boldmath $#1$}} 		% bold math
+\newcommand{\eq}[1]{(\ref{eq:#1})} 				% equations reference
+\newcommand{\fig}[1]{Fig.\ \ref{fig:#1}} 		% figure referencing
+\newcommand{\tab}[1]{Table\ \ref{tab:#1}} 		% table referencing
+\renewcommand{\figurename}{Fig.} 				% caption name
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
