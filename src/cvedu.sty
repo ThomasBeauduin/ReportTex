@@ -1,4 +1,4 @@
-\ProvidesPackage{cveng}
+\ProvidesPackage{cvedu}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Engineer Curriculum Vitae:	
 %% ---------------------
@@ -10,6 +10,7 @@
 \usepackage{unicode}							% Universal Encoding
 \usepackage{marvosym}							% Display Symbols
 \usepackage{textcomp}							% Text Symbols
+\usepackage[super]{nth}
 
 %%%%% Tabel Settings
 \usepackage{tabularx}							% Parametrised tables
@@ -23,11 +24,15 @@
 %%%%% Layout Settings
 \usepackage{parskip}							% proper indenting
 \usepackage{titlesec}							% title design
-\titleformat{\section}{\large \scshape 			% title change
+\titleformat{\section}{\normalsize \scshape 	% title change
 			 \raggedright}{}{0em}{}[\titlerule] % Section settings
-\titlespacing{\section}{0pt}{3pt}{0pt} 			% Spacing around sections
+\titlespacing{\section}{0pt}{3pt}{5pt} 			% Spacing around sections
+\titleformat{\subsection}{\normalsize \bfseries	% title change
+			 \raggedleft}{}{0em}{} 				% Section settings
+\titlespacing{\section}{0pt}{3pt}{5pt} 			% Spacing around sections
+
 \usepackage[top=1.5cm, bottom=1.8cm, 			% page margin settings
-			left=1.3cm, right=1.3cm]{geometry}	% min. 1.2
+			left=1.3cm,right=1.3cm]{geometry}	% min. 1.2
 \usepackage{fancyhdr}							% Layout style	
 \usepackage{lastpage}							% Page numbering
 \fancypagestyle{plain}{							% redefine plain
@@ -76,25 +81,13 @@ Driving Licence \\
 \vspace{0.8cm}}
 
 \newcommand{\USheader}{
-\begin{wrapfigure}{R}{0.25\textwidth}				% wrap cover pic
-\vspace{-30pt}
-\begin{center}
-\includegraphics[scale=0.6]{data/PP1_c.jpg}			% cover picture
-\end{center}
-\end{wrapfigure}
-\par{\Huge \textsc{Thomas Beauduin}\par}			% Applicant Name
-\par{\large \textsc{Curriculum Vitae}\par}			% Resume Description
-\begin{center}
-\begin{tabularx}{100pt}{r}
-Belgian, male \\									% Applicant Info
-3 july 1991, Leuven \\
-Driving Licence \\
-\\
-\Mobilefone \hspace{1 mm} +32476014340 \\
-\MVAt \hspace{1 mm} thomasbeauduin@gmail.com \\
-\Letter \hspace{1 mm} Lenniksesteenweg 444, 1500 Halle
+\center{\Large \textbf{\textsc{Thomas Edward Beauduin}}} \\
+\begin{tabularx}{\textwidth}{lXr}
+155 West \nth{3} Avenue & & Lenniksesteenweg, 444 \\
+Vancouver, BC, Canada & & B-1500 Halle, Belgium \\
++1 360 559 5805 & & +32 476 01 4340 \\
 \end{tabularx}
-\end{center}
-\vspace{0.8cm}}
+\vspace{0.5cm}
+}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
